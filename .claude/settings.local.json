@@ -2,7 +2,13 @@
   "permissions": {
     "allow": [
       "Bash(node:*)",
-      "WebFetch(domain:stackoverflow.com)"
+      "WebFetch(domain:stackoverflow.com)",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__get-library-docs",
+      "Bash(npm install)",
+      "Bash(URL=https://example.com DEPTH=1 node crawlsite.js)",
+      "Bash(URL=https://example.com DEPTH=1 node crawlsite.js --screenshots)",
+      "Bash(git add:*)"
     ],
     "deny": []
   }
