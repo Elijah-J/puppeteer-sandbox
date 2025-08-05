@@ -1,0 +1,16 @@
+{
+  "name": "puppeteer-sandbox",
+  "version": "1.0.0",
+  "description": "A Puppeteer sandbox for web automation experiments",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": ["puppeteer", "screenshot", "web-scraping"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^23.0.0"
+  }
+}
