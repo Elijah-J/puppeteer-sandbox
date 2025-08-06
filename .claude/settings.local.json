@@ -8,7 +8,14 @@
       "Bash(npm install)",
       "Bash(URL=https://example.com DEPTH=1 node crawlsite.js)",
       "Bash(URL=https://example.com DEPTH=1 node crawlsite.js --screenshots)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(URL=https://outerwilds.fandom.com/wiki/Outer_Wilds_Wiki DEPTH=10 node crawlsite.js)",
+      "Bash(git checkout:*)",
+      "Bash(git clean:*)",
+      "Bash(rm:*)",
+      "Bash(git reset:*)"
     ],
     "deny": []
   }
