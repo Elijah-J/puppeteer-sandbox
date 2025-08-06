@@ -7,64 +7,64 @@ import puppeteer from "puppeteer";
 // BEGINNER LEVEL:
 // 1. Basic Browser Launch - Foundation for all Puppeteer operations
 // 2. Navigate to a Website and Get Title - Basic web scraping
-// 3. Capture Website Screenshot - Visual testing and monitoring
-// 4. Extract Data from Page Elements - Web scraping with selectors
-// 5. Wait for Element to Appear - Using waitForSelector
-// 6. Set Viewport Size - Control browser window dimensions
-// 7. Click and Wait for Navigation - Handle page transitions
-// 8. Wait for Function - Wait for custom conditions
-// 9. Get Page URL and Reload - Basic navigation methods
+// 3. Get Page URL and Reload - Basic navigation methods
+// 4. Reload/Refresh Page - Force page refresh with cache options
+// 5. Set Viewport Size - Control browser window dimensions
+// 6. Capture Website Screenshot - Visual testing and monitoring
+// 7. Get Page Content - Extract full HTML
+// 8. Check if Element Exists - Safe element checking
+// 9. Get Text Content Only - Extract visible text without HTML
 // 10. Count Elements on Page - Query multiple elements
-// 11. Check if Element Exists - Safe element checking
-// 12. Get Page Content - Extract full HTML
-// 13. Type with Delay - Simulate human typing
-// 14. Focus on Input Field - Direct element focus
-// 15. Get All Links from Page - Extract all href attributes
-// 16. Handle JavaScript Dialogs - Manage alerts, confirms, prompts
-// 17. Extract Table Data - Scrape HTML tables
-// 18. Basic iframe Handling - Access content inside iframes
-// 19. Get Element Attributes - Extract href, src, data attributes
-// 20. Work with Checkboxes and Radio Buttons - Form element states
-// 21. Select Dropdown Option - Choose from select elements
-// 22. Get Text Content Only - Extract visible text without HTML
-// 23. Clear Input Fields - Reset form elements
-// 24. Take Element Screenshot - Capture specific elements
+// 11. Extract Data from Page Elements - Web scraping with selectors
+// 12. Get Element Attributes - Extract href, src, data attributes
+// 13. Get All Links from Page - Extract all href attributes
+// 14. Check Element Visibility - Determine if element is visible/hidden
+// 15. Check Element Enabled/Disabled State - Verify if buttons/inputs are interactive
+// 16. Focus on Input Field - Direct element focus
+// 17. Clear Input Fields - Reset form elements
+// 18. Type with Delay - Simulate human typing
+// 19. Click and Wait for Navigation - Handle page transitions
+// 20. Press Keyboard Keys - Enter, Tab, Escape key presses
+// 21. Scroll to Element - Bring elements into view
+// 22. Mouse Hover - Hover over elements
+// 23. Navigate Browser History - Go back/forward between pages
+// 24. Wait for Element to Appear - Using waitForSelector
 // 25. Wait for Text to Appear - Wait for specific text content
-// 26. Double Click and Right Click - Advanced mouse interactions
-// 27. Scroll to Element - Bring elements into view
-// 28. Navigate Browser History - Go back/forward between pages
-// 29. Reload/Refresh Page - Force page refresh with cache options
-// 30. Upload Files - Handle file input elements
-// 31. Press Keyboard Keys - Enter, Tab, Escape key presses
-// 32. Check Element Visibility - Determine if element is visible/hidden
-// 33. Check If Checkbox/Radio Is Checked - Get current state of form elements
-// 34. Get Selected Dropdown Value - Read current selection from dropdowns
-// 35. Check Element Enabled/Disabled State - Verify if buttons/inputs are interactive
-// 36. Wait for Element to Disappear - Wait for loading spinners to vanish
-// 37. Get Page Dimensions and Scroll Position - Window size and scroll info
-// 38. Get Element Position and Size - BoundingBox for layout testing
-// 39. Get Console Messages - Capture browser console logs
+// 26. Work with Checkboxes and Radio Buttons - Form element states
+// 27. Select Dropdown Option - Choose from select elements
+// 28. Check If Checkbox/Radio Is Checked - Get current state of form elements
+// 29. Get Selected Dropdown Value - Read current selection from dropdowns
+// 30. Double Click and Right Click - Advanced mouse interactions
+// 31. Upload Files - Handle file input elements
+// 32. Wait for Element to Disappear - Wait for loading spinners to vanish
+// 33. Take Element Screenshot - Capture specific elements
+// 34. Full Page Screenshot - Capture entire scrollable page
+// 35. Handle JavaScript Dialogs - Manage alerts, confirms, prompts
+// 36. Extract Table Data - Scrape HTML tables
+// 37. Basic iframe Handling - Access content inside iframes
+// 38. Get Page Dimensions and Scroll Position - Window size and scroll info
+// 39. Get Element Position and Size - BoundingBox for layout testing
 // 40. Basic Performance Timing - Simple page load time measurement
 // 41. Cookie Management - Get, set, delete cookies
-// 42. Local Storage Access - Read/write browser storage
-// 43. Session Storage Access - Manage session storage
-// 44. Emulate Dark Mode - Media feature emulation
-// 45. Emulate Mobile Device - Device emulation for testing
-// 46. Emulate Network Speed - Slow/Fast connection simulation
-// 47. Mouse Hover - Hover over elements
-// 48. Set User Agent - Change browser identification
-// 49. Set Extra HTTP Headers - Custom request headers
-// 50. Block Images/CSS/Fonts - Resource blocking
-// 51. Monitor Network Requests - Basic request logging
-// 52. Generate PDF from Page - Save page as PDF
-// 53. Full Page Screenshot - Capture entire scrollable page
-// 54. Set Geolocation - Mock GPS location
-// 55. Set Timezone - Change browser timezone
-// 56. Set Language/Locale - Browser language settings
-// 57. Handle Basic Authentication - Auth dialog handling
-// 58. Wait for Network Idle - Wait for all requests to finish
-// 59. Get All Page Cookies - Retrieve all cookies at once
-// 60. Execute Async JavaScript - Run async code in page context
+// 42. Get All Page Cookies - Retrieve all cookies at once
+// 43. Local Storage Access - Read/write browser storage
+// 44. Session Storage Access - Manage session storage
+// 45. Get Console Messages - Capture browser console logs
+// 46. Wait for Function - Wait for custom conditions
+// 47. Execute Async JavaScript - Run async code in page context
+// 48. Monitor Network Requests - Basic request logging
+// 49. Wait for Network Idle - Wait for all requests to finish
+// 50. Generate PDF from Page - Save page as PDF
+// 51. Emulate Dark Mode - Media feature emulation
+// 52. Emulate Mobile Device - Device emulation for testing
+// 53. Set User Agent - Change browser identification
+// 54. Emulate Network Speed - Slow/Fast connection simulation
+// 55. Set Geolocation - Mock GPS location
+// 56. Set Timezone - Change browser timezone
+// 57. Set Language/Locale - Browser language settings
+// 58. Set Extra HTTP Headers - Custom request headers
+// 59. Block Images/CSS/Fonts - Resource blocking
+// 60. Handle Basic Authentication - Auth dialog handling
 //
 // EASY LEVEL:
 // 61. Form Interaction and Login Automation - Form filling and submission
@@ -83,7 +83,7 @@ import puppeteer from "puppeteer";
 // 70. Download File Handling - Automated file downloads
 // 71. Error Handling and Retry Logic - Robust automation
 // 72. Network Request Interception - Mocking and traffic analysis
-// 73. Performance Monitoring - Page load metrics
+// 73. Parallel Execution and Worker Management - Run multiple browsers concurrently
 //
 // EXPERT LEVEL:
 // 74. Permission Management - Handle browser permissions programmatically
@@ -135,7 +135,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 3. Capture Website Screenshot
+// 6. Capture Website Screenshot
 // Description: Demonstrates how to take a screenshot of a webpage
 // and save it to a file. Useful for visual testing, monitoring,
 // or creating thumbnails of websites.
@@ -157,7 +157,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 4. Extract Data from Page Elements
+// 11. Extract Data from Page Elements
 // Description: Demonstrates how to extract data from specific
 // HTML elements using CSS selectors. Shows extraction of text
 // content and attributes, essential for web scraping tasks.
@@ -182,7 +182,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 5. Wait for Element to Appear
+// 24. Wait for Element to Appear
 // Description: Demonstrates how to wait for elements to appear on
 // the page before interacting with them. Essential for handling
 // dynamic content and avoiding "element not found" errors.
@@ -210,7 +210,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 6. Set Viewport Size
+// 5. Set Viewport Size
 // Description: Shows how to set custom viewport dimensions.
 // Useful for testing responsive designs or capturing screenshots
 // at specific resolutions.
@@ -242,7 +242,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 7. Click and Wait for Navigation
+// 19. Click and Wait for Navigation
 // Description: Demonstrates the proper way to click a link and
 // wait for the resulting navigation. Uses Promise.all to avoid
 // race conditions between click and navigation.
@@ -268,7 +268,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 8. Wait for Function
+// 46. Wait for Function
 // Description: Shows how to wait for custom conditions using
 // JavaScript functions. Useful for waiting for specific page
 // states or variable values.
@@ -303,7 +303,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 9. Get Page URL and Reload
+// 3. Get Page URL and Reload
 // Description: Basic navigation methods including getting the
 // current URL, reloading the page, and going back/forward
 // in browser history.
@@ -369,7 +369,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 11. Check if Element Exists
+// 8. Check if Element Exists
 // Description: Safe way to check if an element exists on the
 // page without throwing errors. Useful for conditional logic
 // based on element presence.
@@ -409,7 +409,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 12. Get Page Content
+// 7. Get Page Content
 // Description: Shows how to get the full HTML content of a page
 // or specific elements. Useful for debugging or saving page state.
 // ==================================================
@@ -441,7 +441,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 13. Type with Delay
+// 18. Type with Delay
 // Description: Demonstrates typing with realistic delays to
 // simulate human behavior. Useful for forms that detect
 // bot-like instant typing.
@@ -502,7 +502,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 14. Focus on Input Field
+// 16. Focus on Input Field
 // Description: Shows how to focus on form elements and handle
 // keyboard events. Essential for forms that require focus
 // before accepting input.
@@ -541,7 +541,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 15. Get All Links from Page
+// 13. Get All Links from Page
 // Description: Demonstrates how to extract all links (href attributes)
 // from a webpage. Useful for site mapping, broken link checking,
 // or content discovery. Shows both internal and external links.
@@ -586,7 +586,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 16. Handle JavaScript Dialogs
+// 35. Handle JavaScript Dialogs
 // Description: Shows how to handle JavaScript alerts, confirms,
 // and prompts. Essential for automating sites that use these
 // dialogs for user interaction or validation.
@@ -635,7 +635,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 17. Extract Table Data
+// 36. Extract Table Data
 // Description: Demonstrates how to extract structured data from
 // HTML tables. Common use case for scraping tabular data like
 // prices, schedules, or any structured information.
@@ -646,13 +646,13 @@ import puppeteer from "puppeteer";
 
   // Navigate to a page with a table
   await page.goto(
-    "https://en.wikipedia.org/wiki/List_of_countries_by_population_(United_Nations)"
+    "https://en.wikipedia.org/wiki/List_of_Totally_Spies!_episodes"
   );
 
   // Extract table data
   const tableData = await page.evaluate(() => {
     // Find the first table on the page
-    const table = document.querySelector("table.wikitable");
+    const table = document.querySelector("#mw-content-text > div.mw-content-ltr.mw-parser-output > table:nth-child(12)");
     if (!table) return null;
 
     const rows = Array.from(table.querySelectorAll("tr"));
@@ -688,7 +688,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 18. Basic iframe Handling
+// 37. Basic iframe Handling
 // Description: Shows how to access and interact with content
 // inside iframes. Many websites use iframes for embedded content,
 // ads, or third-party widgets.
@@ -734,7 +734,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 19. Get Element Attributes
+// 12. Get Element Attributes
 // Description: Demonstrates how to extract various attributes
 // from elements like href, src, data attributes, etc. Essential
 // for scraping links, images, and custom data attributes.
@@ -784,7 +784,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 20. Work with Checkboxes and Radio Buttons
+// 26. Work with Checkboxes and Radio Buttons
 // Description: Shows how to interact with checkbox and radio button
 // form elements. Check/uncheck states, verify current selection,
 // and handle multiple options.
@@ -836,7 +836,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 21. Select Dropdown Option
+// 27. Select Dropdown Option
 // Description: Demonstrates how to select options from dropdown
 // (select) elements. Shows single selection, getting current value,
 // and handling multiple selection dropdowns.
@@ -886,7 +886,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 22. Get Text Content Only
+// 9. Get Text Content Only
 // Description: Shows how to extract visible text content without HTML
 // tags. Demonstrates the difference between textContent, innerText,
 // and innerHTML for clean text extraction.
@@ -934,7 +934,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 23. Clear Input Fields
+// 17. Clear Input Fields
 // Description: Demonstrates various ways to clear input fields including
 // text inputs, textareas, and contenteditable elements. Shows the
 // difference between clear() method and other clearing techniques.
@@ -989,7 +989,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 24. Take Element Screenshot
+// 33. Take Element Screenshot
 // Description: Shows how to capture screenshots of specific elements
 // rather than the entire page. Useful for visual testing, creating
 // thumbnails, or documenting specific UI components.
@@ -1105,7 +1105,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 26. Double Click and Right Click
+// 30. Double Click and Right Click
 // Description: Shows how to perform advanced mouse interactions like
 // double-clicking and right-clicking (context menu). Includes handling
 // browser context menus and detecting double-click events.
@@ -1156,7 +1156,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 27. Scroll to Element
+// 21. Scroll to Element
 // Description: Demonstrates different ways to scroll elements into view.
 // Essential for interacting with elements that are outside the viewport
 // or handling lazy-loaded content that appears on scroll.
@@ -1223,7 +1223,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 28. Navigate Browser History
+// 23. Navigate Browser History
 // Description: Shows how to navigate back and forward through browser
 // history. Useful for testing multi-page workflows and handling
 // navigation flows that require going back to previous pages.
@@ -1277,7 +1277,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 29. Reload/Refresh Page
+// 4. Reload/Refresh Page
 // Description: Demonstrates different ways to reload a page including
 // hard refresh (bypass cache) and soft refresh. Useful for testing
 // dynamic content updates and cache behavior.
@@ -1341,7 +1341,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 30. Upload Files
+// 31. Upload Files
 // Description: Shows how to handle file input elements and upload files.
 // Essential for testing forms with file uploads, profile pictures,
 // document submissions, etc.
@@ -1409,7 +1409,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 31. Press Keyboard Keys
+// 20. Press Keyboard Keys
 // Description: Demonstrates how to simulate keyboard key presses including
 // special keys like Enter, Tab, Escape, arrow keys, and keyboard shortcuts.
 // Essential for form navigation and keyboard-based interactions.
@@ -1495,7 +1495,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 32. Check Element Visibility
+// 14. Check Element Visibility
 // Description: Shows different ways to check if an element is visible,
 // hidden, or in the viewport. Essential for testing dynamic UI states,
 // conditional rendering, and responsive layouts.
@@ -1589,7 +1589,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 33. Check If Checkbox/Radio Is Checked
+// 28. Check If Checkbox/Radio Is Checked
 // Description: Shows how to check the current state of checkboxes and
 // radio buttons. Essential for form validation, testing user selections,
 // and verifying default states.
@@ -1677,7 +1677,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 34. Get Selected Dropdown Value
+// 29. Get Selected Dropdown Value
 // Description: Demonstrates various ways to get the currently selected
 // value from dropdown menus (select elements). Shows how to get value,
 // text, and index of selected options.
@@ -1766,7 +1766,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 35. Check Element Enabled/Disabled State
+// 15. Check Element Enabled/Disabled State
 // Description: Shows how to check if form elements and buttons are
 // enabled or disabled. Essential for testing form validation, conditional
 // interactions, and UI state management.
@@ -1859,7 +1859,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 36. Wait for Element to Disappear
+// 32. Wait for Element to Disappear
 // Description: Demonstrates various ways to wait for elements to disappear
 // from the page. Essential for handling loading spinners, modals, alerts,
 // and other temporary UI elements.
@@ -1949,7 +1949,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 37. Get Page Dimensions and Scroll Position
+// 38. Get Page Dimensions and Scroll Position
 // Description: Shows how to get viewport dimensions, page dimensions,
 // and scroll position. Essential for responsive testing, layout verification,
 // and scroll-based interactions.
@@ -2059,7 +2059,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 38. Get Element Position and Size
+// 39. Get Element Position and Size
 // Description: Shows how to get element dimensions, position, and
 // bounding box information. Essential for layout testing, visual
 // regression testing, and element interaction verification.
@@ -2185,7 +2185,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 39. Get Console Messages
+// 45. Get Console Messages
 // Description: Shows how to capture browser console messages including
 // logs, warnings, errors, and debug information. Essential for debugging
 // JavaScript issues and monitoring application behavior.
@@ -2508,7 +2508,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 42. Local Storage Access
+// 43. Local Storage Access
 // Description: Shows how to read, write, and manage browser localStorage.
 // Essential for testing applications that store user preferences, 
 // shopping carts, or other persistent data on the client side.
@@ -2607,7 +2607,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 43. Session Storage Access
+// 44. Session Storage Access
 // Description: Shows how to work with browser sessionStorage, which
 // persists data only for the duration of the page session. Useful for
 // temporary data storage and testing session-based features.
@@ -2712,7 +2712,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 44. Emulate Dark Mode
+// 51. Emulate Dark Mode
 // Description: Shows how to emulate media features like dark mode
 // (prefers-color-scheme). Essential for testing responsive designs
 // that adapt to user's system preferences.
@@ -2803,7 +2803,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 45. Emulate Mobile Device
+// 52. Emulate Mobile Device
 // Description: Shows how to emulate different mobile devices for
 // responsive testing. Includes viewport, user agent, and touch
 // capabilities to accurately simulate mobile browsing.
@@ -2895,7 +2895,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 46. Emulate Network Speed
+// 54. Emulate Network Speed
 // Description: Shows how to simulate different network conditions like
 // 3G, 4G, or offline mode. Essential for testing application behavior
 // under various network speeds and connection quality.
@@ -2995,7 +2995,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 47. Mouse Hover
+// 22. Mouse Hover
 // Description: Shows how to hover over elements with the mouse. Essential
 // for testing dropdown menus, tooltips, and hover-triggered interactions
 // that are common in modern web applications.
@@ -3079,7 +3079,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 48. Set User Agent
+// 53. Set User Agent
 // Description: Shows how to change the browser's user agent string.
 // Essential for testing mobile/desktop detection, avoiding bot detection,
 // and simulating different browsers or devices.
@@ -3139,7 +3139,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 49. Set Extra HTTP Headers
+// 58. Set Extra HTTP Headers
 // Description: Shows how to set custom HTTP headers for all requests.
 // Essential for authentication tokens, API keys, custom headers, and
 // testing server behavior with different request headers.
@@ -3231,7 +3231,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 50. Block Images/CSS/Fonts
+// 59. Block Images/CSS/Fonts
 // Description: Shows how to block specific resource types to speed up
 // page loads and reduce bandwidth. Essential for web scraping, testing
 // text-only content, and improving performance.
@@ -3343,7 +3343,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 51. Monitor Network Requests
+// 48. Monitor Network Requests
 // Description: Shows how to monitor and log all network requests made by
 // a page. Essential for debugging API calls, tracking resources, and
 // understanding page behavior.
@@ -3459,7 +3459,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 52. Generate PDF from Page
+// 50. Generate PDF from Page
 // Description: Shows how to convert web pages to PDF documents with various
 // options. Essential for creating reports, invoices, documentation, and
 // archiving web content.
@@ -3562,7 +3562,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 53. Full Page Screenshot
+// 34. Full Page Screenshot
 // Description: Shows various screenshot techniques including full page,
 // viewport only, specific elements, and with different formats. Essential
 // for visual testing, documentation, and debugging.
@@ -3662,7 +3662,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 54. Set Geolocation
+// 55. Set Geolocation
 // Description: Shows how to override browser geolocation for testing
 // location-based features. Essential for testing maps, location services,
 // and geo-restricted content.
@@ -3766,7 +3766,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 55. Set Timezone
+// 56. Set Timezone
 // Description: Shows how to override browser timezone for testing
 // time-sensitive features. Essential for testing scheduling, calendar
 // features, and timezone-specific behavior.
@@ -3878,7 +3878,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 56. Set Language/Locale
+// 57. Set Language/Locale
 // Description: Shows how to change browser language and locale settings.
 // Essential for testing internationalization, translations, and
 // locale-specific formatting.
@@ -3983,7 +3983,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 57. Handle Basic Authentication
+// 60. Handle Basic Authentication
 // Description: Shows how to handle HTTP basic authentication prompts.
 // Essential for accessing protected resources, APIs, and admin panels
 // that use basic auth.
@@ -4083,7 +4083,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 58. Wait for Network Idle
+// 49. Wait for Network Idle
 // Description: Shows different techniques for waiting until network
 // activity settles. Essential for single-page applications, AJAX-heavy
 // sites, and ensuring all resources are loaded.
@@ -4224,7 +4224,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 59. Get All Page Cookies
+// 42. Get All Page Cookies
 // Description: Shows comprehensive techniques for retrieving and analyzing
 // cookies. Essential for debugging sessions, testing cookie policies, and
 // verifying authentication states.
@@ -4331,7 +4331,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 60. Execute Async JavaScript
+// 47. Execute Async JavaScript
 // Description: Shows how to execute asynchronous JavaScript code in the
 // page context. Essential for complex interactions, waiting for promises,
 // and handling async operations.
@@ -4543,7 +4543,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 21. Page Scrolling and Infinite Scroll Handling
+// 62. Page Scrolling and Infinite Scroll Handling
 // Description: Demonstrates how to scroll through a page and handle
 // infinite scroll scenarios. Useful for scraping social media feeds,
 // product listings, or any page that loads content on scroll.
@@ -4592,7 +4592,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 22. Generate PDF from Webpage
+// 63. Generate PDF from Webpage
 // Description: Shows how to convert a webpage into a PDF document.
 // Includes options for page format and background rendering.
 // Perfect for creating reports or archiving web content.
@@ -4620,7 +4620,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 23. Keyboard and Mouse Actions
+// 64. Keyboard and Mouse Actions
 // Description: Demonstrates advanced keyboard and mouse interactions.
 // Shows typing with delays, keyboard shortcuts, mouse movements,
 // drag and drop, and complex user interaction simulation.
@@ -4670,7 +4670,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 24. Search and Navigation with Locators
+// 65. Search and Navigation with Locators
 // Description: Demonstrates using modern Puppeteer locators including
 // aria selectors and text-based selectors. Shows how to search,
 // wait for results, and extract content from dynamic pages.
@@ -4707,7 +4707,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 25. Multiple Browser Tabs/Pages Management
+// 66. Multiple Browser Tabs/Pages Management
 // Description: Shows how to work with multiple tabs simultaneously.
 // Useful for comparing data across sites, parallel processing,
 // or automating workflows that require multiple browser contexts.
@@ -4746,7 +4746,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 26. Mobile Device Emulation
+// 67. Mobile Device Emulation
 // Description: Shows how to emulate mobile devices for responsive
 // testing. Includes viewport, user agent, and touch event simulation.
 // Perfect for mobile web testing and responsive design verification.
@@ -4782,7 +4782,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 27. Cookie Management
+// 68. Cookie Management
 // Description: Demonstrates how to get, set, and delete cookies.
 // Essential for maintaining sessions, testing different user states,
 // or bypassing login screens with saved authentication.
@@ -4823,7 +4823,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 28. Browser Context Isolation
+// 69. Browser Context Isolation
 // Description: Shows how to create isolated browser contexts that don't
 // share cookies, cache, or other data. Essential for running parallel
 // tests or simulating multiple users with different sessions.
@@ -4873,7 +4873,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 29. Download File Handling
+// 70. Download File Handling
 // Description: Demonstrates how to handle file downloads in Puppeteer.
 // Shows setting download directory and waiting for downloads to complete.
 // Essential for automating report downloads or file exports.
@@ -4907,7 +4907,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 30. Error Handling and Retry Logic
+// 71. Error Handling and Retry Logic
 // Description: Demonstrates robust error handling and retry mechanisms.
 // Essential for creating reliable automation scripts that can handle
 // network issues, element not found errors, and timeouts gracefully.
@@ -4970,7 +4970,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 31. Network Request Interception
+// 72. Network Request Interception
 // Description: Shows how to intercept, modify, and block network
 // requests. Useful for testing offline scenarios, blocking ads,
 // mocking API responses, or analyzing network traffic.
@@ -5013,65 +5013,142 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 32. Performance Monitoring
-// Description: Shows how to collect performance metrics and timing data.
-// Useful for monitoring page load times, identifying bottlenecks,
-// and ensuring optimal user experience in automated tests.
+// 73. Parallel Execution and Worker Management
+// Description: Shows how to run multiple browser instances in parallel
+// for faster scraping and testing. Essential for processing large datasets
+// and improving automation performance.
 // ==================================================
 // (async () => {
-//   const browser = await puppeteer.launch();
-//   const page = await browser.newPage();
+//   const puppeteer = require('puppeteer');
 //
-//   // Enable performance tracking
-//   await page.evaluateOnNewDocument(() => {
-//     window.addEventListener("load", () => {
-//       window.loadTime = Date.now();
-//     });
-//   });
+//   // Function to process a single URL
+//   async function processUrl(url, index) {
+//     const browser = await puppeteer.launch();
+//     const page = await browser.newPage();
+//     
+//     try {
+//       await page.goto(url, { waitUntil: 'networkidle2' });
+//       const title = await page.title();
+//       const screenshot = await page.screenshot({ encoding: 'base64' });
+//       
+//       await browser.close();
+//       return { url, title, screenshot: screenshot.substring(0, 50) + '...', index };
+//     } catch (error) {
+//       await browser.close();
+//       return { url, error: error.message, index };
+//     }
+//   }
 //
+//   // URLs to process
+//   const urls = [
+//     'https://example.com',
+//     'https://google.com',
+//     'https://github.com',
+//     'https://stackoverflow.com'
+//   ];
+//
+//   // Method 1: Process URLs in parallel with Promise.all
+//   console.log('Processing all URLs in parallel...');
 //   const startTime = Date.now();
-//   await page.goto("https://example.com");
-//   const loadTime = Date.now() - startTime;
+//   
+//   const results = await Promise.all(
+//     urls.map((url, index) => processUrl(url, index))
+//   );
+//   
+//   console.log('Results:', results);
+//   console.log('Total time:', Date.now() - startTime, 'ms');
 //
-//   // Get performance metrics
-//   const metrics = await page.metrics();
-//   console.log("Page metrics:", metrics);
+//   // Method 2: Limited concurrency (process 2 at a time)
+//   async function processWithLimit(urls, limit) {
+//     const results = [];
+//     const executing = [];
+//     
+//     for (const [index, url] of urls.entries()) {
+//       const promise = processUrl(url, index).then(result => {
+//         results[index] = result;
+//       });
+//       
+//       executing.push(promise);
+//       
+//       if (executing.length >= limit) {
+//         await Promise.race(executing);
+//         executing.splice(executing.findIndex(p => p === promise), 1);
+//       }
+//     }
+//     
+//     await Promise.all(executing);
+//     return results;
+//   }
 //
-//   // Get detailed performance timing
-//   const performanceData = await page.evaluate(() => {
-//     const timing = performance.timing;
-//     return {
-//       dns: timing.domainLookupEnd - timing.domainLookupStart,
-//       tcp: timing.connectEnd - timing.connectStart,
-//       request: timing.responseStart - timing.requestStart,
-//       response: timing.responseEnd - timing.responseStart,
-//       dom: timing.domComplete - timing.domLoading,
-//       total: timing.loadEventEnd - timing.navigationStart
-//     };
-//   });
+//   console.log('Processing with limit of 2...');
+//   const limitedResults = await processWithLimit(urls, 2);
+//   console.log('Limited results:', limitedResults);
 //
-//   console.log("Load time:", loadTime + "ms");
-//   console.log("Performance breakdown:", performanceData);
+//   // Method 3: Using a worker pool pattern
+//   class BrowserPool {
+//     constructor(size) {
+//       this.size = size;
+//       this.browsers = [];
+//       this.available = [];
+//     }
 //
-//   // Coverage analysis
-//   await page.coverage.startJSCoverage();
-//   await page.coverage.startCSSCoverage();
+//     async init() {
+//       for (let i = 0; i < this.size; i++) {
+//         const browser = await puppeteer.launch();
+//         this.browsers.push(browser);
+//         this.available.push(browser);
+//       }
+//     }
 //
-//   await page.goto("https://example.com");
+//     async acquire() {
+//       while (this.available.length === 0) {
+//         await new Promise(resolve => setTimeout(resolve, 100));
+//       }
+//       return this.available.pop();
+//     }
 //
-//   const jsCoverage = await page.coverage.stopJSCoverage();
-//   const cssCoverage = await page.coverage.stopCSSCoverage();
+//     release(browser) {
+//       this.available.push(browser);
+//     }
 //
-//   console.log("JS Coverage:", jsCoverage.length);
-//   console.log("CSS Coverage:", cssCoverage.length);
+//     async destroy() {
+//       await Promise.all(this.browsers.map(browser => browser.close()));
+//     }
+//   }
 //
-//   await browser.close();
+//   // Use the browser pool
+//   const pool = new BrowserPool(3);
+//   await pool.init();
+//
+//   async function processWithPool(url, pool) {
+//     const browser = await pool.acquire();
+//     const page = await browser.newPage();
+//     
+//     try {
+//       await page.goto(url);
+//       const result = await page.title();
+//       await page.close();
+//       pool.release(browser);
+//       return result;
+//     } catch (error) {
+//       await page.close();
+//       pool.release(browser);
+//       throw error;
+//     }
+//   }
+//
+//   const poolResults = await Promise.all(
+//     urls.map(url => processWithPool(url, pool))
+//   );
+//   
+//   console.log('Pool results:', poolResults);
+//   await pool.destroy();
 // })();
 
 // --------------------------------------------------
 
 // ==================================================
-// 33. Permission Management
+// 74. Permission Management
 // Description: Shows how to manage browser permissions like geolocation,
 // notifications, camera, microphone, and clipboard access. Essential for
 // testing features that require user permissions without manual intervention.
@@ -5118,7 +5195,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 34. Accessibility Testing
+// 75. Accessibility Testing
 // Description: Demonstrates how to use Puppeteer's accessibility API
 // to inspect the accessibility tree, find focused elements, and ensure
 // your web application is accessible to users with assistive technologies.
@@ -5163,7 +5240,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 35. CDP Session and Advanced Browser Control
+// 76. CDP Session and Advanced Browser Control
 // Description: Demonstrates how to create Chrome DevTools Protocol (CDP)
 // sessions for advanced browser control. Shows how to access low-level
 // browser features, network conditions, and debugging capabilities.
@@ -5220,7 +5297,7 @@ import puppeteer from "puppeteer";
 // --------------------------------------------------
 
 // ==================================================
-// 36. WebSocket and Real-time Communication Testing
+// 77. WebSocket and Real-time Communication Testing
 // Description: Shows how to test WebSocket connections and real-time
 // features. Includes intercepting WebSocket frames, simulating messages,
 // and testing connection stability.
